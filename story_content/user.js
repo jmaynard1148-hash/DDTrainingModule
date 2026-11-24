@@ -36,6 +36,22 @@ window.Script1 = function()
     field.setAttribute("inputmode", "numeric");
     field.setAttribute("maxlength", "9");
 
+    // Prevent non-numeric keystrokes
+    field.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey) return;
+
+      if (e.key.length === 1 && !/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent non-numeric text insertion
+    field.addEventListener("beforeinput", function (e) {
+      if (e.data && /\D/.test(e.data)) {
+        e.preventDefault();
+      }
+    });
+
     function cleanValue() {
       const cleaned = field.value.replace(/\D/g, "").slice(0, 9);
 
@@ -76,6 +92,22 @@ window.Script2 = function()
     }
 
     field.setAttribute("inputmode", "numeric");
+
+    // Prevent non-numeric keystrokes
+    field.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey) return;
+
+      if (e.key.length === 1 && !/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent non-numeric text insertion
+    field.addEventListener("beforeinput", function (e) {
+      if (e.data && /\D/.test(e.data)) {
+        e.preventDefault();
+      }
+    });
 
     function cleanValue() {
       const cleaned = field.value.replace(/\D/g, "");
@@ -152,6 +184,22 @@ window.Script5 = function()
     field.setAttribute("inputmode", "numeric");
     field.setAttribute("maxlength", "9");
 
+    // Prevent non-numeric keystrokes
+    field.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey) return;
+
+      if (e.key.length === 1 && !/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent non-numeric text insertion
+    field.addEventListener("beforeinput", function (e) {
+      if (e.data && /\D/.test(e.data)) {
+        e.preventDefault();
+      }
+    });
+
     function cleanValue() {
       const cleaned = field.value.replace(/\D/g, "").slice(0, 9);
 
@@ -192,6 +240,22 @@ window.Script6 = function()
     }
 
     field.setAttribute("inputmode", "numeric");
+
+    // Prevent non-numeric keystrokes
+    field.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey) return;
+
+      if (e.key.length === 1 && !/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent non-numeric text insertion
+    field.addEventListener("beforeinput", function (e) {
+      if (e.data && /\D/.test(e.data)) {
+        e.preventDefault();
+      }
+    });
 
     function cleanValue() {
       const cleaned = field.value.replace(/\D/g, "");
